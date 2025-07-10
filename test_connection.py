@@ -5,9 +5,9 @@ try:
     conn = psycopg2.connect(
         dbname="nutrition_db",
         user="ubuntu",        # current Linux username
-        password="",          # usually empty for local Postgres
         host="localhost",
         port="5432"
+        # No password needed - using trust authentication
     )
     cursor = conn.cursor()
     cursor.execute("SELECT version();")
