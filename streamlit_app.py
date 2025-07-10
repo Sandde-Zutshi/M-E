@@ -61,7 +61,7 @@ def save_data_to_file(data):
     
     return filename
 
-st.title("🧒 Child Nutrition Data Collection (MVP Demo)")
+st.markdown('<h1 style="color: blue; font-size: 80%;">🧒 Child Nutrition Data Collection (MVP Demo)</h1>', unsafe_allow_html=True)
 
 # Progress indicator
 progress_value = (st.session_state.step - 1) / 5
