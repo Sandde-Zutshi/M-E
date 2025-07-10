@@ -5,15 +5,10 @@ import json
 from datetime import datetime
 from psycopg2 import sql
 
-# Connect to PostgreSQL database
-conn = psycopg2.connect(
-    dbname="nutrition_db",
-    user="sandeep",      # your Mac login username
-    password="",         # leave empty if no password set
-    host="localhost",
-    port="5432"
-)
-cursor = conn.cursor()
+# Database connection disabled for Streamlit Cloud demo
+# TODO: Set up cloud database for production
+conn = None
+cursor = None
 
 # Initialize session state for multi-step flow
 if 'step' not in st.session_state:
