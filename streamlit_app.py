@@ -1,7 +1,19 @@
 import streamlit as st
+import psycopg2
 import os
 import json
 from datetime import datetime
+from psycopg2 import sql
+
+# Connect to PostgreSQL database
+conn = psycopg2.connect(
+    dbname="nutrition_db",
+    user="sandeep",      # your Mac login username
+    password="",         # leave empty if no password set
+    host="localhost",
+    port="5432"
+)
+cursor = conn.cursor()
 
 # Initialize session state for multi-step flow
 if 'step' not in st.session_state:
