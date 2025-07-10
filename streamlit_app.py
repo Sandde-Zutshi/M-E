@@ -61,7 +61,18 @@ def save_data_to_file(data):
     
     return filename
 
-st.markdown('<h1 style="color: blue; font-size: 80%;">🧒 Child Nutrition Data Collection (MVP Demo)</h1>', unsafe_allow_html=True)
+# Custom CSS for blue title with 80% font size
+st.markdown("""
+<style>
+.blue-title {
+    color: blue;
+    font-size: 80%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+</style>
+<h1 class="blue-title">🧒 Child Nutrition Data Collection (MVP Demo)</h1>
+""", unsafe_allow_html=True)
 
 # Progress indicator
 progress_value = (st.session_state.step - 1) / 5
